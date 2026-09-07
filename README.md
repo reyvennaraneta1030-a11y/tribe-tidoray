@@ -196,19 +196,7 @@
             margin-top: 0;
         }
 
-        /* ================= FOOTER ================= */
-
-        footer {
-            height: 10vh;
-            background: #3e2723;
-            color: white;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            text-align: center;
-        }
+        
 
         /* ================= MOBILE ================= */
 
@@ -559,20 +547,7 @@ The Tiduray have a rich cultural heritage expressed through their language, trad
         </div>
 
     </div>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <p>
-            © 2026 Tiduray Culture Website | Educational Project
-        </p>
-
-    </footer>
-
-
-    <!-- ================= JAVASCRIPT ================= -->
+      <!-- ================= JAVASCRIPT ================= -->
 
     <script>
 
@@ -607,6 +582,9 @@ The Tiduray have a rich cultural heritage expressed through their language, trad
         });
 
     </script>
+
+
+    
 
 </body>
 </html>
