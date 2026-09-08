@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-    <div name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <title>Tiduray Culture</title>
 
     <style>
@@ -36,530 +34,261 @@
 
         header h1 {
             font-size: 45px;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         header p {
-            font-size: 18px;
+            font-size: 20px;
         }
 
-        /* ================= NAVIGATION ================= */
+        /* ================= MENU ================= */
 
-        nav {
-            height: 10vh;
-            background: #3e2723;
+        .menu {
+            height: 78vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
         }
 
-        nav button {
-            background: transparent;
+        .menu a {
+            text-decoration: none;
             color: white;
-            border: 2px solid #c49a6c;
-            padding: 10px 18px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 15px;
+            background: #8b5e3c;
+            padding: 25px 35px;
+            border-radius: 20px;
+            font-size: 25px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        nav button:hover {
-            background: #c49a6c;
-            color: #3e2723;
-        }
-
-        /* ================= HOME ================= */
-
-        #home {
-            height: 58vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .home-content {
-            width: 80%;
-            max-width: 750px;
-        }
-
-        .home-content h2 {
-            color: #654321;
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .home-content p {
-            font-size: 18px;
-            line-height: 1.7;
+        .menu a:hover {
+            background: #5b3a29;
+            transform: scale(1.05);
         }
 
         /* ================= POPUP ================= */
 
         .popup {
             display: none;
-
             position: fixed;
-            z-index: 10;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-            top: 50%;
-            left: 50%;
+        .popup:target {
+            display: flex;
+        }
 
-            transform: translate(-50%, -50%);
-
-            width: 80%;
-            max-width: 850px;
-            height: 70vh;
-
-            background: white;
-
-            border-radius: 15px;
-
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-
-            padding: 35px;
-
+        .popup-box {
+            background: #fffaf2;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
             overflow-y: auto;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        .popup.active {
-            display: block;
-        }
-
-        .popup h2 {
-            color: #654321;
-            font-size: 32px;
-            margin-bottom: 20px;
+        .popup-box h2 {
+            color: #5b3a29;
+            margin-bottom: 15px;
             text-align: center;
         }
 
-        .popup h3 {
-            color: #805a3b;
-            margin-top: 18px;
-            margin-bottom: 7px;
-        }
-
-        .popup p {
-            line-height: 1.6;
-            margin-bottom: 12px;
-        }
-
-        .popup ul {
-            margin-left: 25px;
+        .popup-box p {
             line-height: 1.7;
+            margin-bottom: 15px;
         }
-
-        /* ================= CLOSE BUTTON ================= */
 
         .close {
-            position: absolute;
-
-            top: 12px;
-            right: 18px;
-
-            border: none;
-            background: #805a3b;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            background: #8b5e3c;
             color: white;
-
-            width: 35px;
-            height: 35px;
-
-            border-radius: 50%;
-
-            font-size: 20px;
-            cursor: pointer;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
 
         .close:hover {
             background: #5b3a29;
         }
 
-        /* ================= CARDS ================= */
-
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .card {
-            background: #f8eee2;
-            padding: 18px;
-            border-radius: 10px;
-            border-left: 5px solid #9b6b43;
-        }
-
-        .card h3 {
-            margin-top: 0;
-        }
-
         
-
-        /* ================= MOBILE ================= */
-
-        @media (max-width: 650px) {
-
-            header h1 {
-                font-size: 30px;
-            }
-
-            header p {
-                font-size: 14px;
-            }
-
-            nav {
-                gap: 5px;
-            }
-
-            nav button {
-                padding: 8px 10px;
-                font-size: 12px;
-            }
-
-            .popup {
-                width: 90%;
-                height: 75vh;
-                padding: 25px;
-            }
-
-            .cards {
-                grid-template-columns: 1fr;
-            }
-        }
     </style>
+</head>
 
 <body>
 
     <!-- ================= HEADER ================= -->
 
     <header>
-        <h1>The Tiduray People</h1>
-
-        <p>
-            Discover Their Culture, Traditions, Beliefs and Heritage
-        </p>
+        <h1>Tiduray Culture</h1>
+        <p style="font-size:180%">Discover the culture, traditions, beliefs, and fun facts of the Tiduray people.</p>
     </header>
 
-
-    <!-- ================= NAVIGATION ================= -->
-
-    <nav>
-
-        <button onclick="openPopup('culture')">
-            Culture
-        </button>
-
-        <button onclick="openPopup('traditions')">
-            Traditions
-        </button>
-
-        <button onclick="openPopup('beliefs')">
-            Beliefs
-        </button>
-
-        <button onclick="openPopup('facts')">
-            Fun Facts
-        </button>
-
-    </nav>
-
-
-    <!-- ================= HOME ================= -->
+ <!-- ================= HOME ================= -->
 
     <section id="home">
 
         <div class="home-content">
-
+            <center>
             <h1>Welcome!</h1>
 
-            <p style="font-size:150%;">
-                The Tiduray, also known as Teduray or Tiruray, are one of the Indigenous peoples of Mindanao in the Philippines. Their communities are traditionally associated with areas of Maguindanao and nearby parts of Central Mindanao.
+            <p style="font-size:240%;">
+                The Tiduray, also known as Teduray or Tiruray,<br> are one of the Indigenous peoples of Mindanao in the Philippines.<br> Their communities are traditionally<br> associated with areas of Maguindanao and nearby parts of Central Mindanao.
 
-The Tiduray have a rich cultural heritage expressed through their language, traditional knowledge, clothing, crafts, music, stories, and relationship with nature.
+The Tiduray<br> have a rich cultural heritage expressed through their language, <br> traditional knowledge, clothing, crafts, music, stories, and relationship with nature.
             </p>
 
-           
+           </center>
 
-        </div>
+    <!-- ================= MENU ================= -->
 
-    </section>
+    <div class="menu">
 
+        <a href="#culture">Culture</a>
+        <a href="#traditions">Traditions</a>
+        <a href="#beliefs">Beliefs</a>
+        <a href="#facts">Fun Facts</a>
 
-    <!-- ================================================= -->
+    </div>
+
     <!-- ================= CULTURE POPUP ================= -->
-    <!-- ================================================= -->
 
     <div id="culture" class="popup">
 
-        <button class="close" onclick="closePopup('culture')">
-            ×
-        </button>
+        <div class="popup-box">
 
-        <h2> Tiduray Culture</h2>
+            <h2>Tiduray Culture</h2>
 
-        <p>
-            Tiduray culture includes traditional knowledge,
-            crafts, music, stories, family relationships, and
-            a strong connection with the natural environment.
-        </p>
+            <p>
+                The Tiduray, also known as Teduray, are an Indigenous
+                people of Mindanao, particularly in parts of Maguindanao
+                del Sur and nearby areas.
+            </p>
 
-        <div class="cards">
+            <p>
+                Their culture includes traditional clothing, music,
+                weaving, farming, and strong community relationships.
+            </p>
 
-            <div class="card">
-                <h3>Traditional Crafts</h3>
+            <p>
+                They are known for preserving their identity through
+                language, customs, and traditional practices.
+            </p>
 
-                <p>
-                    Weaving, beadwork, basketry, and other
-                    handicrafts are important expressions of
-                    cultural identity.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Music</h3>
-
-                <p>
-                    Traditional songs and musical instruments
-                    can be part of cultural and community activities.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Oral Tradition</h3>
-
-                <p>
-                    Stories, legends, songs, and knowledge
-                    can be passed from elders to younger generations.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Nature</h3>
-
-                <p>
-                    Traditional knowledge includes forests,
-                    plants, animals, farming, rivers, and
-                    the surrounding environment.
-                </p>
-            </div>
+            <a href="#" class="close">Close</a>
 
         </div>
 
     </div>
 
-
-    <!-- ================================================= -->
-    <!-- ================ TRADITIONS POPUP =============== -->
-    <!-- ================================================= -->
+    <!-- ================= TRADITIONS POPUP ================= -->
 
     <div id="traditions" class="popup">
 
-        <button class="close" onclick="closePopup('traditions')">
-            ×
-        </button>
+        <div class="popup-box">
 
-        <h2> Tiduray Traditions</h2>
+            <h2>Tiduray Traditions</h2>
 
-        <h3>Traditional Clothing</h3>
+            <p>
+                Traditional Tiduray communities value cooperation,
+                respect for elders, and the passing of knowledge
+                from one generation to another.
+            </p>
 
-        <p>
-            Traditional clothing may include handwoven
-            textiles, decorative patterns, beadwork,
-            and accessories. Styles can differ between communities.
-        </p>
+            <p>
+                Traditional weaving, music, dances, and community
+                gatherings are important parts of their cultural
+                expression.
+            </p>
 
+            <p>
+                Many traditions are connected to their relationship
+                with nature and their way of life.
+            </p>
 
-        <h3>Weaving</h3>
-
-        <p>
-            Weaving is an important traditional skill.
-            It can help preserve cultural knowledge and
-            demonstrate the creativity and skills of artisans.
-        </p>
-
-
-        <h3>Community Cooperation</h3>
-
-        <p>
-            Cooperation between family and community members
-            is an important part of traditional life.
-        </p>
-
-
-        <h3>Storytelling</h3>
-
-        <p>
-            Elders can play an important role in passing
-            stories, history, values, and knowledge to
-            younger generations.
-        </p>
-
-
-        <h3>Important Traditional Values</h3>
-
-        <ul>
-            <li>Respect for elders</li>
-            <li>Community cooperation</li>
-            <li>Preservation of traditional skills</li>
-            <li>Respect for nature</li>
-            <li>Passing knowledge to younger generations</li>
-        </ul>
-
-    </div>
-
-
-    <!-- ================================================= -->
-    <!-- ================= BELIEFS POPUP ================= -->
-    <!-- ================================================= -->
-
-    <div id="beliefs" class="popup">
-
-        <button class="close" onclick="closePopup('beliefs')">
-            ×
-        </button>
-
-        <h2> Tiduray Beliefs</h2>
-
-        <p>
-            Traditional Tiduray beliefs have included a
-            strong relationship between people, nature,
-            and the spiritual world.
-        </p>
-
-
-        <h3>Respect for Nature</h3>
-
-        <p>
-            Nature has an important place in traditional
-            Tiduray life and worldview. Forests, rivers,
-            plants, and animals are part of their environment
-            and traditional knowledge.
-        </p>
-
-
-        <h3>Spiritual World</h3>
-
-        <p>
-            Traditional Tiduray worldview has included
-            beliefs concerning spirits and supernatural beings.
-            Rituals and customary practices have historically
-            been connected with important events and the environment.
-        </p>
-
-
-        <h3>Respect for Elders</h3>
-
-        <p>
-            Elders are important sources of traditional
-            knowledge, stories, history, and cultural practices.
-        </p>
-
-
-        <h3>Remember</h3>
-
-        <p>
-            Not every Tiduray person follows exactly the same
-            beliefs today. Culture and beliefs can differ between
-            communities and families and can change over time.
-        </p>
-
-    </div>
-
-
-    <!-- ================================================= -->
-    <!-- ================= FACTS POPUP =================== -->
-    <!-- ================================================= -->
-
-    <div id="facts" class="popup">
-
-        <button class="close" onclick="closePopup('facts')">
-            ×
-        </button>
-
-        <h2> Fun Facts About the Tiduray</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                <h3>1. Indigenous People</h3>
-
-                <p>
-                    The Tiduray are an Indigenous people
-                    traditionally associated with areas of
-                    Central Mindanao.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <h3>2. Their Own Language</h3>
-
-                <p>
-                    The Tiduray language belongs to the
-                    Austronesian language family.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <h3>3. Weaving</h3>
-
-                <p>
-                    Traditional weaving and handicrafts
-                    are important parts of their cultural heritage.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <h3>4. Connection With Nature</h3>
-
-                <p>
-                    Traditional knowledge includes plants,
-                    forests, farming, animals, and the environment.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <h3>5. Oral Tradition</h3>
-
-                <p>
-                    Stories and traditional knowledge can
-                    be passed from elders to younger generations.
-                </p>
-            </div>
-
-
-            <div class="card">
-                <h3>6. Different Names</h3>
-
-                <p>
-                    Tiduray, Teduray, and Tiruray are spellings
-                    used in different sources for the same
-                    Indigenous cultural group.
-                </p>
-            </div>
+            <a href="#" class="close">Close</a>
 
         </div>
 
     </div>
-       <!-- ================= Open popup ================= -->
-      <button popover target="culture">Culture</button>
 
-      <!=========== popup ===========>
-      <div id="culture" popover>
-      <h2>Culture</h2>
-      <p> Learn about tiduray<p>
-      <!========= close popup =======>
-      <button popover target="culture" popover target action="hide"
-      close
-      </button>
+    <!-- ================= BELIEFS POPUP ================= -->
+
+    <div id="beliefs" class="popup">
+
+        <div class="popup-box">
+
+            <h2>Tiduray Beliefs</h2>
+
+            <p>
+                Tiduray traditional beliefs include respect for
+                nature, ancestors, and the spiritual world.
+            </p>
+
+            <p>
+                Their traditional knowledge and practices reflect
+                the importance of harmony between people and their
+                environment.
+            </p>
+
+            <p>
+                Beliefs and customs may vary among communities and
+                families.
+            </p>
+
+            <a href="#" class="close">Close</a>
+
+        </div>
+
     </div>
-    
+
+    <!-- ================= FUN FACTS POPUP ================= -->
+
+    <div id="facts" class="popup">
+
+        <div class="popup-box">
+
+            <h2>Fun Facts About the Tiduray</h2>
+
+            <p>
+                • The Tiduray are also called Teduray.
+            </p>
+
+            <p>
+                • They are an Indigenous people of Mindanao.
+            </p>
+
+            <p>
+                • Traditional weaving is an important part of
+                their cultural heritage.
+            </p>
+
+            <p>
+                • Their culture includes traditional music,
+                dances, and community practices.
+            </p>
+
+            <p>
+                • They have their own language and cultural identity.
+            </p>
+
+            <a href="#" class="close">Close</a>
+
+        </div>
+
+    </div>
 
 </body>
 </html>
