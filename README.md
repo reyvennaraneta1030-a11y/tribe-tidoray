@@ -561,11 +561,5 @@ The Tiduray have a rich cultural heritage expressed through their language, trad
     </div>
     
 
-
-    
-
-
-    
-
 </body>
 </html>
