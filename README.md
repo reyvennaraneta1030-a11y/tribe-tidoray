@@ -361,7 +361,7 @@ The Tiduray have a rich cultural heritage expressed through their language, trad
             ×
         </button>
 
-        <h2>🪶 Tiduray Traditions</h2>
+        <h2> Tiduray Traditions</h2>
 
         <h3>Traditional Clothing</h3>
 
@@ -547,41 +547,22 @@ The Tiduray have a rich cultural heritage expressed through their language, trad
         </div>
 
     </div>
-      <!-- ================= JAVASCRIPT ================= -->
+       <!-- ================= Open popup ================= -->
+      <button popover target="culture">Culture</button>
 
-    <script>
-
-        function openPopup(id) {
-
-            document.getElementById(id).classList.add("active");
-
-        }
-
-
-        function closePopup(id) {
-
-            document.getElementById(id).classList.remove("active");
-
-        }
+      <!=========== popup ===========>
+      <div id="culture" popover>
+      <h2>Culture</h2>
+      <p> Learn about tiduray<p>
+      <!========= close popup =======>
+      <button popover target="culture" popover target action="hide"
+      close
+      </button>
+    </div>
+    
 
 
-        // Close popup when pressing ESC
-
-        document.addEventListener("keydown", function(event) {
-
-            if (event.key === "Escape") {
-
-                document.querySelectorAll(".popup").forEach(function(popup) {
-
-                    popup.classList.remove("active");
-
-                });
-
-            }
-
-        });
-
-    </script>
+    
 
 
     
