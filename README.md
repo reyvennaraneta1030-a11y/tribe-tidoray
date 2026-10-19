@@ -1,5 +1,5 @@
 <DOCTYPE html>
-<head
+<head>
     <title>Tiduray Culture</title>
 
     <style>
